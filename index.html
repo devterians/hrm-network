@@ -105,6 +105,44 @@ body{margin:0}
 .areas span{padding:10px 18px;border-radius:999px;background:#0F5E6D;color:#fff;font-size:14.5px;font-weight:600}
 .areas span.hi{background:#8FE8CF;color:#0A3C47;font-weight:800}
 .foot{position:relative;font-size:12.5px;color:#9FC4CB;padding-top:18px;border-top:1px solid #1B6F7E}
+/* Tampilan Responsif untuk HP dan Tablet */
+@media (max-width: 768px) {
+  /* Kurangi jarak padding agar tidak terlalu lebar di layar kecil */
+  .sec { padding: 0 20px; }
+  .hero { padding: 40px 20px 30px; }
+  .hero h1 { font-size: 38px; }
+  .closing { padding: 40px 20px; }
+  .closing h2 { font-size: 28px; }
+  
+  /* Ubah statistik di banner menjadi ke bawah */
+  .stats { flex-direction: column; gap: 10px; }
+  
+  /* Ubah semua grid 4 kolom, 3 kolom, 2 kolom menjadi 1 kolom penuh */
+  .tiles, .grid2, .wide, .rhythm {
+    grid-template-columns: 1fr;
+  }
+  
+  /* Rapikan judul divisi */
+  .dh { flex-direction: column; align-items: flex-start; gap: 12px; }
+  .dcount { margin-left: 0; }
+  
+  /* Sesuaikan posisi lingkaran dekorasi di background hero agar tidak menutupi teks */
+  .hero .c1 { right: -200px; top: -200px; }
+  .hero .c2 { right: -50px; top: 150px; }
+}
+/* --- Efek Animasi Fade-in on Scroll --- */
+/* State awal: elemen transparan dan agak turun ke bawah */
+.fade-in {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* State akhir: elemen terlihat jelas dan kembali ke posisi semula */
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
 </style>
 </helmet>
 <div class="root">
@@ -162,13 +200,13 @@ body{margin:0}
   </section>
 
   <!-- DIVISI 1: SOCIAL MEDIA -->
-  <section class="sec d1" style="margin-top:56px">
+  <section class="sec d1 fade-in" style="margin-top:56px">
     <div class="dh">
       <span class="dico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.5 7.2L4 21l1.8-5A8 8 0 1 1 21 12z"></path></svg></span>
       <div><div class="dk">Divisi 1</div><h2>Social Media &amp; Publikasi</h2></div>
       <span class="dcount">1 program</span>
     </div>
-    <article class="card">
+    <section class="sec d1 fade-in" style="margin-top:56px">
       <div class="wide">
         <div class="col">
           <div class="ch"><span class="cn">01</span><h3>Branding &amp; Publikasi Multi-Platform</h3></div>
@@ -204,7 +242,7 @@ body{margin:0}
       <span class="dcount">2 program</span>
     </div>
     <div class="grid2">
-      <article class="card">
+      <section class="sec d1 fade-in" style="margin-top:56px">
         <div class="ch"><span class="cn">02</span><h3>Pengembangan Member: Review CV, Simulasi Interview, Skill Up</h3></div>
         <p class="desc">Meningkatkan daya saing dan kapasitas karier para pekerja manufaktur melalui pendampingan berkala.</p>
         <div class="lbl">Alur kerja</div>
@@ -223,7 +261,7 @@ body{margin:0}
         </div>
         <p class="vis"><b>Visi jangka panjang</b>Membangun talent pool pekerja manufaktur internal yang solid dan kompeten.</p>
       </article>
-      <article class="card">
+      <section class="sec d1 fade-in" style="margin-top:56px">
         <div class="ch"><span class="cn">03</span><h3>Ekspansi Kemitraan Edukasi &amp; Korporasi</h3></div>
         <p class="desc">Menjangkau institusi pendidikan (sekolah/kampus) serta menjalin kemitraan dengan korporasi manufaktur.</p>
         <div class="lbl">Alur kerja</div>
@@ -252,7 +290,7 @@ body{margin:0}
       <span class="dcount">5 program</span>
     </div>
     <div class="grid2">
-      <article class="card">
+      <section class="sec d1 fade-in" style="margin-top:56px">
         <div class="ch"><span class="cn">04</span><h3>Bakti Sosial &amp; Donasi Barang Layak Pakai/Buku</h3></div>
         <p class="desc">Menumbuhkan kepedulian sosial anggota serta berbagi manfaat kepada masyarakat luas.</p>
         <div class="lbl">Alur kerja</div>
@@ -271,7 +309,7 @@ body{margin:0}
         </div>
         <p class="vis"><b>Visi jangka panjang</b>Meningkatkan kepedulian sosial dan keterikatan (engagement) antar pekerja manufaktur.</p>
       </article>
-      <article class="card">
+      <section class="sec d1 fade-in" style="margin-top:56px">
         <div class="ch"><span class="cn">05</span><h3>Gerakan Jumat Berkah</h3></div>
         <p class="desc">Berbagi makanan siap saji kepada masyarakat sekitar kawasan industri Cikarang.</p>
         <div class="lbl">Alur kerja</div>
@@ -290,7 +328,7 @@ body{margin:0}
         </div>
         <p class="vis"><b>Visi jangka panjang</b>Mempererat silaturahmi komunitas pekerja manufaktur dengan warga sekitar.</p>
       </article>
-      <article class="card">
+      <section class="sec d1 fade-in" style="margin-top:56px">
         <div class="ch"><span class="cn">06</span><h3>Gerakan 1 Member 1 Sembako</h3></div>
         <p class="desc">Mengumpulkan donasi sembako dari anggota saat kumpulan bulanan untuk disalurkan kepada marbot masjid sekitar.</p>
         <div class="lbl">Alur kerja</div>
@@ -309,7 +347,7 @@ body{margin:0}
         </div>
         <p class="vis"><b>Visi jangka panjang</b>Membentuk budaya berbagi yang melekat pada seluruh pekerja anggota komunitas.</p>
       </article>
-      <article class="card">
+      <section class="sec d1 fade-in" style="margin-top:56px">
         <div class="ch"><span class="cn">07</span><h3>Kunjungan &amp; Edukasi Panti Asuhan / Panti Jompo</h3></div>
         <p class="desc">Memberikan dukungan moral, donasi, serta sesi edukasi/hiburan bagi penghuni panti.</p>
         <div class="lbl">Alur kerja</div>
@@ -328,7 +366,7 @@ body{margin:0}
         </div>
         <p class="vis"><b>Visi jangka panjang</b>Menebar keberkahan dan nilai-nilai kemanusiaan dari komunitas manufaktur.</p>
       </article>
-      <article class="card">
+      <section class="sec d1 fade-in" style="margin-top:56px">
         <div class="ch"><span class="cn">08</span><h3>Penyuluhan &amp; Pemberdayaan Masyarakat Cikarang</h3></div>
         <p class="desc">Menerapkan keahlian dan prinsip kerja manufaktur (seperti 5S, K3, &amp; pengelolaan sampah) di lingkungan masyarakat.</p>
         <div class="lbl">Alur kerja</div>
@@ -368,7 +406,7 @@ body{margin:0}
       <span class="dcount">2 program</span>
     </div>
     <div class="grid2">
-      <article class="card">
+      <section class="sec d1 fade-in" style="margin-top:56px">
         <div class="ch"><span class="cn">09</span><h3>Penyusunan &amp; Pengelolaan Database Stakeholder</h3></div>
         <p class="desc">Membangun direktori kontak terpusat untuk mendukung seluruh operasional dan ekspansi komunitas.</p>
         <div class="lbl">Alur kerja</div>
@@ -387,7 +425,7 @@ body{margin:0}
         </div>
         <p class="vis"><b>Visi jangka panjang</b>Aset jejaring strategis komunitas pekerja manufaktur yang siap diakses.</p>
       </article>
-      <article class="card">
+      <section class="sec d1 fade-in" style="margin-top:56px">
         <div class="ch"><span class="cn">10</span><h3>Branding, Outreach &amp; Narahubung Resmi</h3></div>
         <p class="desc">Menjalin hubungan baik dengan pihak luar, menjadi pintu komunikasi resmi, serta mendukung kebutuhan antar-divisi.</p>
         <div class="lbl">Alur kerja</div>
@@ -457,6 +495,25 @@ class Component extends DCLogic {
     return {};
   }
 }
+</script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    // Membuat pengamat (observer) untuk mengecek apakah elemen sudah masuk ke layar
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible'); // Tambahkan class 'visible' untuk menjalankan animasi
+          observer.unobserve(entry.target); // Supaya animasi hanya jalan satu kali saat pertama kali dilihat
+        }
+      });
+    }, { 
+      threshold: 0.15 // Animasi mulai saat 15% bagian elemen sudah terlihat di layar
+    });
+
+    // Cari semua elemen yang punya class 'fade-in' dan pantau mereka
+    const hiddenElements = document.querySelectorAll('.fade-in');
+    hiddenElements.forEach((el) => observer.observe(el));
+  });
 </script>
 </body>
 </html>
