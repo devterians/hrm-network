@@ -1,0 +1,461 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<title>Infografis Program Kerja Komunitas HRM</title>
+<script src="./vendor/react.js"></script>
+<script src="./vendor/react-dom.js"></script>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+.root{width:1080px;min-height:5800px;box-sizing:border-box;background:#F3F8F6;color:#12303A;font-family:'Plus Jakarta Sans',system-ui,sans-serif;display:flex;flex-direction:column;overflow:hidden}
+.root *{box-sizing:border-box}
+.d1{--c:#C8401F;--on:#FFFFFF;--tint:#FDECE7;--deep:#9E2F14}
+.d2{--c:#0B7A66;--on:#FFFFFF;--tint:#E2F4EF;--deep:#0A5C4E}
+.d3{--c:#F2A81D;--on:#3B2500;--tint:#FFF3DA;--deep:#7A4A00}
+.d4{--c:#2F5FD0;--on:#FFFFFF;--tint:#E7EEFC;--deep:#22479C}
+.sec{padding:0 40px;display:flex;flex-direction:column;gap:20px}
+.eyebrow{font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#0B7A66}
+.h2{margin:0;font-size:32px;font-weight:800;letter-spacing:-.01em;color:#12303A;line-height:1.15}
+.lead{margin:0;font-size:15.5px;line-height:1.6;color:#4A6169;max-width:720px}
+.hero{position:relative;background:#0A4A57;color:#fff;padding:64px 56px 56px;overflow:hidden}
+.hero .c1{position:absolute;right:-120px;top:-140px;width:420px;height:420px;border-radius:50%;background:#0F5E6D}
+.hero .c2{position:absolute;right:90px;top:210px;width:150px;height:150px;border-radius:50%;background:#8FE8CF;opacity:.9}
+.hero .c3{position:absolute;right:-40px;bottom:-110px;width:260px;height:260px;border-radius:50%;border:34px solid #14707F}
+.hero .in{position:relative;display:flex;flex-direction:column;gap:22px}
+.tag{align-self:flex-start;display:inline-flex;align-items:center;gap:8px;padding:8px 16px;border-radius:999px;background:#0F5E6D;color:#CFF5E9;font-size:13px;font-weight:600;letter-spacing:.04em}
+.tag i{width:8px;height:8px;border-radius:50%;background:#8FE8CF;display:block}
+.hero h1{margin:0;font-size:64px;line-height:1.04;font-weight:800;letter-spacing:-.02em;max-width:640px}
+.hero h1 span{color:#8FE8CF}
+.hero p{margin:0;font-size:18px;line-height:1.55;color:#CFE6EA;max-width:560px}
+.stats{display:flex;gap:16px;margin-top:14px}
+.stat{background:#0F5E6D;border-radius:18px;padding:18px 22px;min-width:150px}
+.stat b{display:block;font-size:40px;line-height:1;font-weight:800;color:#8FE8CF}
+.stat span{display:block;margin-top:8px;font-size:13.5px;color:#CFE6EA;line-height:1.4}
+.tiles{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.tile{background:var(--tint);border-radius:22px;padding:22px 20px;display:flex;flex-direction:column;gap:12px}
+.tile .tk{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--deep)}
+.tile .tn{font-size:56px;line-height:1;font-weight:800;color:var(--deep)}
+.tile .tn small{font-size:15px;font-weight:700;margin-left:6px}
+.tile h3{margin:0;font-size:17px;line-height:1.25;font-weight:800;color:#12303A}
+.dots{display:flex;gap:5px}
+.dot{width:11px;height:11px;border-radius:50%;background:#fff;border:1.5px solid var(--c)}
+.dot.on{background:var(--c)}
+.tile ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:6px}
+.tile li{font-size:13.5px;line-height:1.4;color:#27434D;display:flex;gap:8px}
+.tile li:before{content:"";flex:none;width:6px;height:6px;border-radius:50%;background:var(--c);margin-top:7px}
+.dh{display:flex;align-items:center;gap:16px}
+.dico{width:56px;height:56px;border-radius:18px;background:var(--c);color:var(--on);display:flex;align-items:center;justify-content:center;flex:none}
+.dico svg{width:28px;height:28px}
+.dk{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--deep)}
+.dh h2{margin:2px 0 0;font-size:28px;line-height:1.15;font-weight:800;color:#12303A}
+.dcount{margin-left:auto;padding:8px 16px;border-radius:999px;background:var(--tint);color:var(--deep);font-size:13.5px;font-weight:700;white-space:nowrap}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.card{background:#fff;border:1px solid #DDE9E4;border-radius:24px;padding:26px;display:flex;flex-direction:column;gap:16px;box-shadow:0 6px 18px rgba(18,48,58,.06)}
+.ch{display:flex;align-items:center;gap:14px}
+.cn{flex:none;width:44px;height:44px;border-radius:50%;background:var(--c);color:var(--on);font-size:16px;font-weight:800;display:flex;align-items:center;justify-content:center}
+.ch h3{margin:0;font-size:19px;line-height:1.25;font-weight:800;color:#12303A}
+.desc{margin:0;font-size:14.5px;line-height:1.6;color:#4A6169}
+.lbl{display:flex;align-items:center;gap:7px;font-size:11.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--deep)}
+.ic{width:16px;height:16px;flex:none}
+.steps{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:10px}
+.steps li{display:flex;gap:12px;align-items:flex-start;font-size:14px;line-height:1.5;color:#27434D}
+.sn{flex:none;width:24px;height:24px;border-radius:50%;background:var(--tint);color:var(--deep);font-size:12.5px;font-weight:800;display:flex;align-items:center;justify-content:center;margin-top:1px}
+.kpi{background:var(--tint);border-radius:16px;padding:14px 16px;display:flex;flex-direction:column;gap:6px}
+.kpi p{margin:0;font-size:14px;line-height:1.5;font-weight:600;color:#12303A}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto}
+.chip{display:inline-flex;align-items:center;gap:7px;padding:7px 13px;border-radius:999px;background:#EEF4F2;color:#27434D;font-size:12.5px;font-weight:600}
+.chip .ic{width:15px;height:15px;color:var(--deep)}
+.vis{margin:0;padding-top:14px;border-top:1px dashed #C9D9D3;font-size:13px;line-height:1.55;color:#4A6169}
+.vis b{display:block;margin-bottom:3px;font-size:11.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--deep)}
+.wide{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:32px}
+.col{display:flex;flex-direction:column;gap:16px}
+.plat{display:flex;flex-wrap:wrap;gap:8px}
+.plat span{padding:7px 14px;border-radius:12px;background:var(--c);color:var(--on);font-size:13px;font-weight:700}
+.note{background:#0A4A57;border-radius:24px;padding:26px;color:#fff;display:flex;flex-direction:column;gap:14px;justify-content:center}
+.note .eb{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#8FE8CF}
+.note h3{margin:0;font-size:24px;line-height:1.2;font-weight:800}
+.note ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:10px}
+.note li{display:flex;gap:10px;font-size:14.5px;line-height:1.45;color:#D7EAEE}
+.note li:before{content:"";flex:none;width:8px;height:8px;border-radius:50%;background:#F2A81D;margin-top:6px}
+.rhythm{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.rcol{background:#fff;border:1px solid #DDE9E4;border-radius:24px;padding:22px;display:flex;flex-direction:column;gap:14px;box-shadow:0 6px 18px rgba(18,48,58,.06)}
+.rhead{padding-bottom:12px;border-bottom:2px solid #E3EEEA}
+.rhead h3{margin:0;font-size:22px;font-weight:800;color:#12303A}
+.rhead span{font-size:13px;font-weight:600;color:#4A6169}
+.row{display:flex;gap:12px;align-items:center}
+.row .cn{width:36px;height:36px;font-size:13.5px}
+.row div{display:flex;flex-direction:column;gap:1px}
+.row b{font-size:14px;line-height:1.3;font-weight:700;color:#12303A}
+.row small{font-size:12.5px;line-height:1.35;color:#4A6169}
+.closing{flex:1;margin-top:56px;background:#0A4A57;color:#fff;padding:56px 56px 40px;display:flex;flex-direction:column;justify-content:center;gap:26px;position:relative;overflow:hidden}
+.closing .c1{position:absolute;left:-90px;bottom:-120px;width:300px;height:300px;border-radius:50%;background:#0F5E6D}
+.closing .in{position:relative;display:flex;flex-direction:column;gap:22px}
+.closing h2{margin:0;font-size:34px;line-height:1.15;font-weight:800;max-width:640px}
+.closing h2 span{color:#8FE8CF}
+.closing p{margin:0;font-size:15.5px;line-height:1.6;color:#CFE6EA;max-width:640px}
+.areas{display:flex;flex-wrap:wrap;gap:10px}
+.areas span{padding:10px 18px;border-radius:999px;background:#0F5E6D;color:#fff;font-size:14.5px;font-weight:600}
+.areas span.hi{background:#8FE8CF;color:#0A3C47;font-weight:800}
+.foot{position:relative;font-size:12.5px;color:#9FC4CB;padding-top:18px;border-top:1px solid #1B6F7E}
+</style>
+</helmet>
+<div class="root">
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="c1"></div><div class="c2"></div><div class="c3"></div>
+    <div class="in">
+      <span class="tag"><i></i>Komunitas HRM Cikarang · Periode 2026–2027</span>
+      <h1>Program Kerja <span>Komunitas HRM</span></h1>
+      <p>Wadah jejaring antar pekerja manufaktur di Cikarang Greater Area: tumbuh bersama, berbagi, dan membangun kolaborasi.</p>
+      <div class="stats">
+        <div class="stat"><b>10</b><span>Program kerja</span></div>
+        <div class="stat"><b>4</b><span>Divisi pelaksana</span></div>
+        <div class="stat"><b>3</b><span>Tahap eksekusi<br>di setiap program</span></div>
+      </div>
+    </div>
+  </header>
+
+  <!-- PETA DIVISI -->
+  <section class="sec" style="margin-top:52px">
+    <div class="eyebrow">Gambaran umum</div>
+    <h2 class="h2">Peta 4 Divisi &amp; 10 Program</h2>
+    <p class="lead">Setiap divisi memegang peran berbeda, dari membangun citra, mengembangkan member, berbagi untuk masyarakat, hingga menjaga jejaring dengan pihak luar.</p>
+    <div class="tiles">
+      <div class="tile d1">
+        <div class="tk">Divisi</div>
+        <div class="tn">1<small>program</small></div>
+        <h3>Social Media &amp; Publikasi</h3>
+        <div class="dots"><span class="dot on"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+        <ul><li>Branding &amp; Publikasi Multi-Platform</li></ul>
+      </div>
+      <div class="tile d2">
+        <div class="tk">Divisi</div>
+        <div class="tn">2<small>program</small></div>
+        <h3>Community Growth</h3>
+        <div class="dots"><span class="dot on"></span><span class="dot on"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+        <ul><li>Pengembangan Member</li><li>Kemitraan Edukasi &amp; Korporasi</li></ul>
+      </div>
+      <div class="tile d3">
+        <div class="tk">Divisi</div>
+        <div class="tn">5<small>program</small></div>
+        <h3>CSR</h3>
+        <div class="dots"><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+        <ul><li>Bakti Sosial &amp; Donasi</li><li>Gerakan Jumat Berkah</li><li>1 Member 1 Sembako</li><li>Kunjungan Panti</li><li>Penyuluhan Masyarakat</li></ul>
+      </div>
+      <div class="tile d4">
+        <div class="tk">Divisi</div>
+        <div class="tn">2<small>program</small></div>
+        <h3>External Relations</h3>
+        <div class="dots"><span class="dot on"></span><span class="dot on"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+        <ul><li>Database Stakeholder</li><li>Outreach &amp; Narahubung Resmi</li></ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- DIVISI 1: SOCIAL MEDIA -->
+  <section class="sec d1" style="margin-top:56px">
+    <div class="dh">
+      <span class="dico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.5 7.2L4 21l1.8-5A8 8 0 1 1 21 12z"></path></svg></span>
+      <div><div class="dk">Divisi 1</div><h2>Social Media &amp; Publikasi</h2></div>
+      <span class="dcount">1 program</span>
+    </div>
+    <article class="card">
+      <div class="wide">
+        <div class="col">
+          <div class="ch"><span class="cn">01</span><h3>Branding &amp; Publikasi Multi-Platform</h3></div>
+          <p class="desc">Membangun awareness dan citra positif Komunitas HRM Cikarang sebagai wadah jejaring antar pekerja manufaktur di platform digital.</p>
+          <div class="plat"><span>Instagram</span><span>Threads</span><span>TikTok</span><span>LinkedIn</span></div>
+          <div class="kpi">
+            <div class="lbl"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><circle cx="12" cy="12" r="5"></circle><circle cx="12" cy="12" r="1.5"></circle></svg>Target / KPI</div>
+            <p>Meningkatkan Impressions, Reach, dan Jumlah Followers secara berkesinambungan</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="lbl">Alur kerja</div>
+          <ol class="steps">
+            <li><span class="sn">1</span><span>Penyusunan kalender konten mingguan</span></li>
+            <li><span class="sn">2</span><span>Produksi konten edukasi &amp; liputan kegiatan pekerja manufaktur</span></li>
+            <li><span class="sn">3</span><span>Optimalisasi distribusi di IG, Threads, TikTok, LinkedIn</span></li>
+          </ol>
+          <div class="chips">
+            <span class="chip"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>Rutin Mingguan / Bulanan</span>
+            <span class="chip"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c0-4 4-6 8-6s8 2 8 6"></path></svg>Tim Social Media &amp; Publikasi</span>
+          </div>
+          <p class="vis"><b>Visi jangka panjang</b>Menjadikan Komunitas HRM sebagai rujukan utama wawasan dan jejaring pekerja manufaktur khususnya di Cikarang Greater Area (Bekasi, Jakarta, Karawang, Purwakarta, Subang).</p>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <!-- DIVISI 2: COMMUNITY GROWTH -->
+  <section class="sec d2" style="margin-top:56px">
+    <div class="dh">
+      <span class="dico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8"></path><path d="M15 7h6v6"></path></svg></span>
+      <div><div class="dk">Divisi 2</div><h2>Community Growth</h2></div>
+      <span class="dcount">2 program</span>
+    </div>
+    <div class="grid2">
+      <article class="card">
+        <div class="ch"><span class="cn">02</span><h3>Pengembangan Member: Review CV, Simulasi Interview, Skill Up</h3></div>
+        <p class="desc">Meningkatkan daya saing dan kapasitas karier para pekerja manufaktur melalui pendampingan berkala.</p>
+        <div class="lbl">Alur kerja</div>
+        <ol class="steps">
+          <li><span class="sn">1</span><span>Profiling kebutuhan member (pekerja manufaktur)</span></li>
+          <li><span class="sn">2</span><span>Pembentukan tim eksekutor internal (Reviewer, Interviewer, Speaker)</span></li>
+          <li><span class="sn">3</span><span>Eksekusi project berkala (Periode 2027)</span></li>
+        </ol>
+        <div class="kpi">
+          <div class="lbl"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><circle cx="12" cy="12" r="5"></circle><circle cx="12" cy="12" r="1.5"></circle></svg>Target / KPI</div>
+          <p>Partisipasi member &amp; peningkatan kesiapan kerja/kompetensi pekerja manufaktur</p>
+        </div>
+        <div class="chips">
+          <span class="chip"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>Triwulan / Semesteran</span>
+          <span class="chip"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c0-4 4-6 8-6s8 2 8 6"></path></svg>Tim Community Growth &amp; Mentors</span>
+        </div>
+        <p class="vis"><b>Visi jangka panjang</b>Membangun talent pool pekerja manufaktur internal yang solid dan kompeten.</p>
+      </article>
+      <article class="card">
+        <div class="ch"><span class="cn">03</span><h3>Ekspansi Kemitraan Edukasi &amp; Korporasi</h3></div>
+        <p class="desc">Menjangkau institusi pendidikan (sekolah/kampus) serta menjalin kemitraan dengan korporasi manufaktur.</p>
+        <div class="lbl">Alur kerja</div>
+        <ol class="steps">
+          <li><span class="sn">1</span><span>Penawaran program pelatihan/penyuluhan ke sekolah &amp; kampus</span></li>
+          <li><span class="sn">2</span><span>Kerjasama dengan korporasi manufaktur untuk supply manpower &amp; top candidate sourcing</span></li>
+        </ol>
+        <div class="kpi">
+          <div class="lbl"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><circle cx="12" cy="12" r="5"></circle><circle cx="12" cy="12" r="1.5"></circle></svg>Target / KPI</div>
+          <p>Jumlah sekolah/kampus mitra &amp; penyerapan tenaga kerja ke korporasi</p>
+        </div>
+        <div class="chips">
+          <span class="chip"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>Tahunan / Periode 2027</span>
+          <span class="chip"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c0-4 4-6 8-6s8 2 8 6"></path></svg>Tim Community Growth &amp; External Relations</span>
+        </div>
+        <p class="vis"><b>Visi jangka panjang</b>Menjadi mitra strategis korporasi industri manufaktur dalam penyediaan tenaga kerja siap pakai.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- DIVISI 3: CSR -->
+  <section class="sec d3" style="margin-top:56px">
+    <div class="dh">
+      <span class="dico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-8-5-8-11a4.5 4.5 0 0 1 8-2.8A4.5 4.5 0 0 1 20 10c0 6-8 11-8 11z"></path></svg></span>
+      <div><div class="dk">Divisi 3</div><h2>CSR</h2></div>
+      <span class="dcount">5 program</span>
+    </div>
+    <div class="grid2">
+      <article class="card">
+        <div class="ch"><span class="cn">04</span><h3>Bakti Sosial &amp; Donasi Barang Layak Pakai/Buku</h3></div>
+        <p class="desc">Menumbuhkan kepedulian sosial anggota serta berbagi manfaat kepada masyarakat luas.</p>
+        <div class="lbl">Alur kerja</div>
+        <ol class="steps">
+          <li><span class="sn">1</span><span>Pengumpulan buku/barang layak pakai dari member</span></li>
+          <li><span class="sn">2</span><span>Sortir dan paking</span></li>
+          <li><span class="sn">3</span><span>Penyaluran ke target penerima</span></li>
+        </ol>
+        <div class="kpi">
+          <div class="lbl"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><circle cx="12" cy="12" r="5"></circle><circle cx="12" cy="12" r="1.5"></circle></svg>Target / KPI</div>
+          <p>Jumlah barang/buku terdistribusi &amp; jumlah penerima manfaat</p>
+        </div>
+        <div class="chips">
+          <span class="chip"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>Semesteran / Tahunan</span>
+          <span class="chip"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c0-4 4-6 8-6s8 2 8 6"></path></svg>Tim CSR</span>
+        </div>
+        <p class="vis"><b>Visi jangka panjang</b>Meningkatkan kepedulian sosial dan keterikatan (engagement) antar pekerja manufaktur.</p>
+      </article>
+      <article class="card">
+        <div class="ch"><span class="cn">05</span><h3>Gerakan Jumat Berkah</h3></div>
+        <p class="desc">Berbagi makanan siap saji kepada masyarakat sekitar kawasan industri Cikarang.</p>
+        <div class="lbl">Alur kerja</div>
+        <ol class="steps">
+          <li><span class="sn">1</span><span>Penggalangan dana/donasi makanan</span></li>
+          <li><span class="sn">2</span><span>Pembelian/penyiapan paket makanan</span></li>
+          <li><span class="sn">3</span><span>Distribusi lapangan di kawasan industri/masyarakat</span></li>
+        </ol>
+        <div class="kpi">
+          <div class="lbl"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><circle cx="12" cy="12" r="5"></circle><circle cx="12" cy="12" r="1.5"></circle></svg>Target / KPI</div>
+          <p>Jumlah paket makanan terbagi per kegiatan</p>
+        </div>
+        <div class="chips">
+          <span class="chip"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>Bulanan / Dua Mingguan</span>
+          <span class="chip"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c0-4 4-6 8-6s8 2 8 6"></path></svg>Tim CSR</span>
+        </div>
+        <p class="vis"><b>Visi jangka panjang</b>Mempererat silaturahmi komunitas pekerja manufaktur dengan warga sekitar.</p>
+      </article>
+      <article class="card">
+        <div class="ch"><span class="cn">06</span><h3>Gerakan 1 Member 1 Sembako</h3></div>
+        <p class="desc">Mengumpulkan donasi sembako dari anggota saat kumpulan bulanan untuk disalurkan kepada marbot masjid sekitar.</p>
+        <div class="lbl">Alur kerja</div>
+        <ol class="steps">
+          <li><span class="sn">1</span><span>Himbauan membawa 1 item sembako saat kumpulan rutin</span></li>
+          <li><span class="sn">2</span><span>Konsolidasi &amp; paketisasi</span></li>
+          <li><span class="sn">3</span><span>Penyaluran langsung ke marbot masjid</span></li>
+        </ol>
+        <div class="kpi">
+          <div class="lbl"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><circle cx="12" cy="12" r="5"></circle><circle cx="12" cy="12" r="1.5"></circle></svg>Target / KPI</div>
+          <p>100% partisipasi anggota kumpulan &amp; distribusi tepat sasaran</p>
+        </div>
+        <div class="chips">
+          <span class="chip"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>Rutin Bulanan (saat kumpulan)</span>
+          <span class="chip"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c0-4 4-6 8-6s8 2 8 6"></path></svg>Tim CSR</span>
+        </div>
+        <p class="vis"><b>Visi jangka panjang</b>Membentuk budaya berbagi yang melekat pada seluruh pekerja anggota komunitas.</p>
+      </article>
+      <article class="card">
+        <div class="ch"><span class="cn">07</span><h3>Kunjungan &amp; Edukasi Panti Asuhan / Panti Jompo</h3></div>
+        <p class="desc">Memberikan dukungan moral, donasi, serta sesi edukasi/hiburan bagi penghuni panti.</p>
+        <div class="lbl">Alur kerja</div>
+        <ol class="steps">
+          <li><span class="sn">1</span><span>Penentuan panti sasaran</span></li>
+          <li><span class="sn">2</span><span>Penyusunan materi edukasi &amp; hiburan</span></li>
+          <li><span class="sn">3</span><span>Pelaksanaan acara dan penyerahan santunan</span></li>
+        </ol>
+        <div class="kpi">
+          <div class="lbl"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><circle cx="12" cy="12" r="5"></circle><circle cx="12" cy="12" r="1.5"></circle></svg>Target / KPI</div>
+          <p>Terselenggaranya acara interaktif &amp; penyaluran donasi</p>
+        </div>
+        <div class="chips">
+          <span class="chip"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>Tahunan / Hari Besar</span>
+          <span class="chip"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c0-4 4-6 8-6s8 2 8 6"></path></svg>Tim CSR</span>
+        </div>
+        <p class="vis"><b>Visi jangka panjang</b>Menebar keberkahan dan nilai-nilai kemanusiaan dari komunitas manufaktur.</p>
+      </article>
+      <article class="card">
+        <div class="ch"><span class="cn">08</span><h3>Penyuluhan &amp; Pemberdayaan Masyarakat Cikarang</h3></div>
+        <p class="desc">Menerapkan keahlian dan prinsip kerja manufaktur (seperti 5S, K3, &amp; pengelolaan sampah) di lingkungan masyarakat.</p>
+        <div class="lbl">Alur kerja</div>
+        <ol class="steps">
+          <li><span class="sn">1</span><span>Pemetaan isu lingkungan warga di Cikarang</span></li>
+          <li><span class="sn">2</span><span>Penyusunan materi pembekalan (pengelolaan sampah &amp; tata kelola lingkungan)</span></li>
+          <li><span class="sn">3</span><span>Pelaksanaan sosialisasi &amp; pendampingan warga</span></li>
+        </ol>
+        <div class="kpi">
+          <div class="lbl"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><circle cx="12" cy="12" r="5"></circle><circle cx="12" cy="12" r="1.5"></circle></svg>Target / KPI</div>
+          <p>Peningkatan kesadaran lingkungan &amp; penerapan prinsip manufaktur di masyarakat</p>
+        </div>
+        <div class="chips">
+          <span class="chip"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>Semesteran</span>
+          <span class="chip"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c0-4 4-6 8-6s8 2 8 6"></path></svg>Tim CSR</span>
+        </div>
+        <p class="vis"><b>Visi jangka panjang</b>Kontribusi nyata profesional dan pekerja manufaktur untuk kemajuan masyarakat Cikarang.</p>
+      </article>
+      <div class="note">
+        <div class="eb">Semangat CSR</div>
+        <h3>Berbagi yang dekat dengan lingkungan sekitar</h3>
+        <ul>
+          <li>Masyarakat sekitar kawasan industri Cikarang</li>
+          <li>Marbot masjid di sekitar komunitas</li>
+          <li>Penghuni panti asuhan &amp; panti jompo</li>
+          <li>Warga Cikarang lewat penyuluhan 5S, K3 &amp; pengelolaan sampah</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- DIVISI 4: EXTERNAL RELATIONS -->
+  <section class="sec d4" style="margin-top:56px">
+    <div class="dh">
+      <span class="dico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"></path><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"></path></svg></span>
+      <div><div class="dk">Divisi 4</div><h2>External Relations</h2></div>
+      <span class="dcount">2 program</span>
+    </div>
+    <div class="grid2">
+      <article class="card">
+        <div class="ch"><span class="cn">09</span><h3>Penyusunan &amp; Pengelolaan Database Stakeholder</h3></div>
+        <p class="desc">Membangun direktori kontak terpusat untuk mendukung seluruh operasional dan ekspansi komunitas.</p>
+        <div class="lbl">Alur kerja</div>
+        <ol class="steps">
+          <li><span class="sn">1</span><span>Pengumpulan &amp; verifikasi data kontak</span></li>
+          <li><span class="sn">2</span><span>Pengelompokan (Narasumber/Trainer, Sekolah/Kampus, Pemerintah, Korporasi, Sponsor/Brand)</span></li>
+          <li><span class="sn">3</span><span>Pemeliharaan data berkala</span></li>
+        </ol>
+        <div class="kpi">
+          <div class="lbl"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><circle cx="12" cy="12" r="5"></circle><circle cx="12" cy="12" r="1.5"></circle></svg>Target / KPI</div>
+          <p>Database terisi lengkap &amp; updated untuk 5 kategori sasaran</p>
+        </div>
+        <div class="chips">
+          <span class="chip"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>Kontinu / Bulanan</span>
+          <span class="chip"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c0-4 4-6 8-6s8 2 8 6"></path></svg>Tim External Relations</span>
+        </div>
+        <p class="vis"><b>Visi jangka panjang</b>Aset jejaring strategis komunitas pekerja manufaktur yang siap diakses.</p>
+      </article>
+      <article class="card">
+        <div class="ch"><span class="cn">10</span><h3>Branding, Outreach &amp; Narahubung Resmi</h3></div>
+        <p class="desc">Menjalin hubungan baik dengan pihak luar, menjadi pintu komunikasi resmi, serta mendukung kebutuhan antar-divisi.</p>
+        <div class="lbl">Alur kerja</div>
+        <ol class="steps">
+          <li><span class="sn">1</span><span>Audiensi/perkenalan awal ke target mitra eksternal</span></li>
+          <li><span class="sn">2</span><span>Menjadi LO kegiatan eksternal</span></li>
+          <li><span class="sn">3</span><span>Mendampingi divisi lain saat membutuhkan akses eksternal</span></li>
+        </ol>
+        <div class="kpi">
+          <div class="lbl"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><circle cx="12" cy="12" r="5"></circle><circle cx="12" cy="12" r="1.5"></circle></svg>Target / KPI</div>
+          <p>Responsivitas komunikasi &amp; terjalinnya kolaborasi baru</p>
+        </div>
+        <div class="chips">
+          <span class="chip"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>Rutin / Standby</span>
+          <span class="chip"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c0-4 4-6 8-6s8 2 8 6"></path></svg>Tim External Relations</span>
+        </div>
+        <p class="vis"><b>Visi jangka panjang</b>Menjaga reputasi profesional dan kredibilitas Komunitas HRM di mata mitra eksternal.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- RITME PELAKSANAAN -->
+  <section class="sec" style="margin-top:64px">
+    <div class="eyebrow">Ritme pelaksanaan</div>
+    <h2 class="h2">Kapan Program Berjalan?</h2>
+    <p class="lead">Program dikelompokkan berdasarkan frekuensinya, dari yang berjalan rutin tiap minggu atau bulan hingga agenda tahunan. Warna lingkaran mengikuti warna divisi.</p>
+    <div class="rhythm">
+      <div class="rcol">
+        <div class="rhead"><h3>Rutin</h3><span>Mingguan – Bulanan</span></div>
+        <div class="row d1"><span class="cn">01</span><div><b>Branding &amp; Publikasi</b><small>Rutin Mingguan / Bulanan</small></div></div>
+        <div class="row d3"><span class="cn">05</span><div><b>Gerakan Jumat Berkah</b><small>Bulanan / Dua Mingguan</small></div></div>
+        <div class="row d3"><span class="cn">06</span><div><b>1 Member 1 Sembako</b><small>Bulanan, saat kumpulan</small></div></div>
+        <div class="row d4"><span class="cn">09</span><div><b>Database Stakeholder</b><small>Kontinu / Bulanan</small></div></div>
+        <div class="row d4"><span class="cn">10</span><div><b>Outreach &amp; Narahubung</b><small>Rutin / Standby</small></div></div>
+      </div>
+      <div class="rcol">
+        <div class="rhead"><h3>Berkala</h3><span>Triwulan – Semesteran</span></div>
+        <div class="row d2"><span class="cn">02</span><div><b>Pengembangan Member</b><small>Triwulan / Semesteran</small></div></div>
+        <div class="row d3"><span class="cn">08</span><div><b>Penyuluhan Masyarakat</b><small>Semesteran</small></div></div>
+        <div class="row d3"><span class="cn">04</span><div><b>Bakti Sosial &amp; Donasi</b><small>Semesteran / Tahunan</small></div></div>
+      </div>
+      <div class="rcol">
+        <div class="rhead"><h3>Tahunan</h3><span>Periode 2027 &amp; hari besar</span></div>
+        <div class="row d2"><span class="cn">03</span><div><b>Kemitraan Edukasi &amp; Korporasi</b><small>Program Tahunan / Periode 2027</small></div></div>
+        <div class="row d3"><span class="cn">07</span><div><b>Kunjungan Panti</b><small>Tahunan / Hari Besar</small></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PENUTUP -->
+  <footer class="closing">
+    <div class="c1"></div>
+    <div class="in">
+      <div class="eyebrow" style="color:#8FE8CF">Jangkauan &amp; arah</div>
+      <h2>Rujukan wawasan &amp; jejaring pekerja manufaktur di <span>Cikarang Greater Area</span></h2>
+      <p>Seluruh program bermuara pada satu tujuan: menjadikan Komunitas HRM wadah jejaring yang dipercaya, bermanfaat bagi sesama pekerja, dan hadir nyata bagi masyarakat sekitar.</p>
+      <div class="areas"><span class="hi">Cikarang</span><span>Bekasi</span><span>Jakarta</span><span>Karawang</span><span>Purwakarta</span><span>Subang</span></div>
+      <div class="foot">Sumber: Program Kerja Komunitas HRM 2026–2027</div>
+    </div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1080,"height":5800}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {};
+  }
+}
+</script>
+</body>
+</html>
