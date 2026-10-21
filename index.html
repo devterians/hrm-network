@@ -152,51 +152,31 @@ body { margin: 0; }
   /* (Opsional) Mengubah kursor menjadi bentuk tangan */
   cursor: pointer; 
 }
-/* --- CSS Responsif (Untuk HP/Tablet) --- */
+/* Tampilan Responsif untuk HP dan Tablet */
 @media (max-width: 768px) {
-  /* Kurangi padding utama agar ruang di HP lebih lega */
-  .sec { padding: 0 16px; }
-  .hero { padding: 40px 16px 30px; }
-  .hero h1 { font-size: 32px; }
-  .closing { padding: 40px 16px; }
-  .closing h2 { font-size: 24px; }
+  /* Kurangi jarak padding agar tidak terlalu lebar di layar kecil */
+  .sec { padding: 0 20px; }
+  .hero { padding: 40px 20px 30px; }
+  .hero h1 { font-size: 38px; }
+  .closing { padding: 40px 20px; }
+  .closing h2 { font-size: 28px; }
+  
+  /* Ubah statistik di banner menjadi ke bawah */
   .stats { flex-direction: column; gap: 10px; }
   
-  /* --- KUNCI 2 KOLOM DI HP --- */
-  /* Tetap jadikan 2 kolom untuk kotak overview dan program kerja */
-  .tiles, .grid2, .wide { 
-    grid-template-columns: repeat(2, minmax(0, 1fr)); 
-    gap: 12px; /* Jarak antar kotak diperkecil */
+  /* Ubah semua grid 4 kolom, 3 kolom, 2 kolom menjadi 1 kolom penuh */
+  .tiles, .grid2, .wide, .rhythm {
+    grid-template-columns: 1fr;
   }
   
-  /* Khusus jadwal ritme di bagian bawah kita buat 1 kolom agar tetap terbaca jelas */
-  .rhythm { grid-template-columns: 1fr; }
-
-  /* --- PENYESUAIAN UKURAN CARD AGAR MUAT DI 2 KOLOM --- */
-  /* Perkecil ruang kosong, font, dan icon di dalam kotak */
-  .card, .tile, .note { padding: 14px; gap: 10px; }
-  .ch { gap: 8px; }
-  .ch h3, .tile h3, .note h3 { font-size: 13.5px; line-height: 1.3; }
-  .desc, .steps li, .kpi p, .vis, .note li { font-size: 11px; line-height: 1.4; }
-  
-  /* Perkecil lingkaran nomor (01, 02, dst) */
-  .cn { width: 30px; height: 30px; font-size: 12px; }
-  .sn { width: 18px; height: 18px; font-size: 10px; margin-top: 2px; }
-  
-  /* Perkecil label dan chip */
-  .lbl, .vis b { font-size: 9.5px; }
-  .chip { font-size: 9.5px; padding: 4px 8px; gap: 4px; }
-  .chip .ic { width: 12px; height: 12px; }
-  
-  /* Rapikan judul divisi utama */
+  /* Rapikan judul divisi */
   .dh { flex-direction: column; align-items: flex-start; gap: 12px; }
   .dcount { margin-left: 0; }
   
-  /* Sesuaikan posisi lingkaran dekorasi di background hero */
+  /* Sesuaikan posisi lingkaran dekorasi di background hero agar tidak menutupi teks */
   .hero .c1 { right: -200px; top: -200px; }
   .hero .c2 { right: -50px; top: 150px; }
 }
-
 /* --- Efek Animasi Fade-in on Scroll --- */
 .fade-in {
   opacity: 0;
